@@ -45,10 +45,11 @@ public class BaseTest {
 			ChromeOptions options = new ChromeOptions();
 			
 			//WebDriverManager.chromedriver().setup();
-			System.setProperty("webdriver.chrome.driver", "/home/ec2-user/chromedriver-linux64/chromedriver");
+		    System.setProperty("webdriver.chrome.driver", "/home/ec2-user/chromedriver-linux64/chromedriver");
+			//System.setProperty("webdriver.chrome.driver", "/Users/ansobolev1989/Local Files/chromedriver-mac-x64 3/chromedriver");
 			
 			if (browserName.contains("headless")) {
-			options.addArguments("headless");
+			options.addArguments("--headless");
 			options.addArguments("--remote-allow-origins=*");
 			 System.out.println("Headless mode!");
 			}

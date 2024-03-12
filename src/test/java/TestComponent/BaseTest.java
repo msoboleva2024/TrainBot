@@ -48,9 +48,11 @@ public class BaseTest {
 			
 			if (browserName.contains("headless")) {
 			options.addArguments("headless");
+			 System.out.println("Headless mode!");
 			}
 			 driver = new ChromeDriver(options);
 			 driver.manage().window().setSize(new Dimension(1440, 900));
+			 System.out.println("ChromeDriver was initialized ");
 			 }
 		
 		

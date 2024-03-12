@@ -44,8 +44,8 @@ public class BaseTest {
 			
 			ChromeOptions options = new ChromeOptions();
 			
-			//WebDriverManager.chromedriver().setup();
-			System.setProperty("webdriver.chrome.driver", "/home/ec2-user/chromedriver-linux64/chromedriver");
+			WebDriverManager.chromedriver().setup();
+			//System.setProperty("webdriver.chrome.driver", "/home/ec2-user/chromedriver-linux64/chromedriver");
 			
 			if (browserName.contains("headless")) {
 			options.addArguments("headless");
@@ -53,7 +53,9 @@ public class BaseTest {
 			 System.out.println("Headless mode!");
 			}
 			 driver = new ChromeDriver(options);
-			 driver.manage().window().setSize(new Dimension(1440, 900));
+			 System.out.println("ChromeDriver  options set ");
+			 driver.manage().window().maximize();
+			 System.out.println("Window maximised ");
 			 System.out.println("ChromeDriver was initialized ");
 			 }
 		

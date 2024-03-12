@@ -44,8 +44,8 @@ public class BaseTest {
 			
 			ChromeOptions options = new ChromeOptions();
 			
-			WebDriverManager.chromedriver().setup();
-			//System.setProperty("webdriver.chrome.driver", "/home/ec2-user/chromedriver-linux64/chromedriver");
+			//WebDriverManager.chromedriver().setup();
+			System.setProperty("webdriver.chrome.driver", "/home/ec2-user/chromedriver-linux64/chromedriver");
 			
 			if (browserName.contains("headless")) {
 			options.addArguments("headless");

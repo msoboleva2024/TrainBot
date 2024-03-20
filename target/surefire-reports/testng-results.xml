@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-03-12T15:55:41 CET" name="Surefire suite" finished-at="2024-03-12T15:56:33 CET" duration-ms="51704">
+  <suite started-at="2024-03-14T20:06:51 CET" name="Surefire suite" finished-at="2024-03-14T21:02:11 CET" duration-ms="3319882">
     <groups>
     </groups>
-    <test started-at="2024-03-12T15:55:41 CET" name="Surefire test" finished-at="2024-03-12T15:56:33 CET" duration-ms="51704">
+    <test started-at="2024-03-14T20:06:51 CET" name="Surefire test" finished-at="2024-03-14T21:02:11 CET" duration-ms="3319882">
       <class name="tests.RZDTrainTests">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:tests.RZDTrainTests@7770f470]" started-at="2024-03-12T15:55:41 CET" name="launchApplication" finished-at="2024-03-12T15:55:44 CET" duration-ms="3235" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:tests.RZDTrainTests@7770f470]" started-at="2024-03-14T20:06:51 CET" name="launchApplication" finished-at="2024-03-14T20:22:51 CET" duration-ms="959749" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="searchTicketsActual()[pri:0, instance:tests.RZDTrainTests@7770f470]" started-at="2024-03-12T15:55:44 CET" name="searchTicketsActual" finished-at="2024-03-12T15:56:18 CET" duration-ms="33846" status="PASS">
+        <test-method signature="searchTicketsActual()[pri:0, instance:tests.RZDTrainTests@7770f470]" started-at="2024-03-14T20:22:51 CET" name="searchTicketsActual" finished-at="2024-03-14T20:23:33 CET" duration-ms="41848" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchTicketsActual -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:tests.RZDTrainTests@7770f470]" started-at="2024-03-12T15:56:18 CET" name="launchApplication" finished-at="2024-03-12T15:56:20 CET" duration-ms="2214" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:tests.RZDTrainTests@7770f470]" started-at="2024-03-14T20:23:33 CET" name="launchApplication" finished-at="2024-03-14T21:01:52 CET" duration-ms="2299330" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="searchTicketsJune()[pri:0, instance:tests.RZDTrainTests@7770f470]" started-at="2024-03-12T15:56:20 CET" name="searchTicketsJune" finished-at="2024-03-12T15:56:33 CET" duration-ms="12355" status="PASS">
+        <test-method signature="searchTicketsJune()[pri:0, instance:tests.RZDTrainTests@7770f470]" started-at="2024-03-14T21:01:52 CET" name="searchTicketsJune" finished-at="2024-03-14T21:02:11 CET" duration-ms="18652" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchTicketsJune -->

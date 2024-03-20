@@ -18,7 +18,7 @@ public class RZDTrainTests extends BaseTest {
 
 	
 
-	@Test
+
 	public void searchTicketsActual() throws InterruptedException, IOException {
 		
 		
@@ -40,10 +40,12 @@ public class RZDTrainTests extends BaseTest {
 		
 	}
 	
+	
+	
 	@Test
 	public void searchTicketsJune() throws InterruptedException, IOException {
 		
-		
+		telegram.sendMsgToTelegram("Тест1: поиск билетов туда/обратно.");
 		long currentTimeInMillis = System.currentTimeMillis();
         Date currentDate = new Date(currentTimeInMillis);
 		String currentDateTime = currentDate.toString(); 
@@ -58,6 +60,61 @@ public class RZDTrainTests extends BaseTest {
 		SearchResultsRZD searchResultsRZD = mainPageRZD.clickSearchTickets();
 
 		telegram.sendMsgToTelegram(searchResultsRZD.returnTrains());
+		telegram.sendMsgToTelegram("Тест1: закончен.");
+		
+		
+	}
+	
+	
+	
+	@Test
+	public void searchTicketsJuneOneDirectionA () throws InterruptedException, IOException {
+		
+		
+		telegram.sendMsgToTelegram("Тест2: поиск билетов ТОЛЬКО ТУДА.");
+		long currentTimeInMillis = System.currentTimeMillis();
+        Date currentDate = new Date(currentTimeInMillis);
+		String currentDateTime = currentDate.toString(); 
+		telegram.sendMsgToTelegram(currentDateTime. toString()+": Запуск бота со следующими критериями поиска: \n" + "Откуда: Санкт-Петербург, Куда: Анапа, Туда: 11.06.2024. Без билетов обратно");
+		
+		AssertJUnit.assertTrue(mainPageRZD.checkTitle());
+		mainPageRZD.setCityFrom("Санкт-Петербург");
+		mainPageRZD.setCityTo("Анапа");
+		mainPageRZD.setFromDate("11","Июнь","2024");
+		
+		
+		SearchResultsRZD searchResultsRZD = mainPageRZD.clickSearchTickets();
+
+		telegram.sendMsgToTelegram(searchResultsRZD.returnTrains());
+		
+		telegram.sendMsgToTelegram("Тест2: закончен.");
+		
+		
+		
+	}
+
+
+	@Test
+	public void searchTicketsJuneDirectionBack() throws InterruptedException, IOException {
+		
+		
+		telegram.sendMsgToTelegram("Тест3: поиск билетов ТОЛЬКО ОБРАТНО.");
+		long currentTimeInMillis = System.currentTimeMillis();
+        Date currentDate = new Date(currentTimeInMillis);
+		String currentDateTime = currentDate.toString(); 
+		telegram.sendMsgToTelegram(currentDateTime. toString()+": Запуск бота со следующими критериями поиска: \n" + "Откуда: Анапа, Куда: Санкт-Петербург, Обратно: 25.06.2024. Без билетов туда");
+		
+		AssertJUnit.assertTrue(mainPageRZD.checkTitle());
+		mainPageRZD.setCityFrom("Анапа");
+		mainPageRZD.setCityTo("Санкт-Петербург");
+		mainPageRZD.setFromDate("25","Июнь","2024");
+		
+		SearchResultsRZD searchResultsRZD = mainPageRZD.clickSearchTickets();
+
+		telegram.sendMsgToTelegram(searchResultsRZD.returnTrains());
+		
+		telegram.sendMsgToTelegram("Тест3: закончен.");
+		
 		
 		
 	}

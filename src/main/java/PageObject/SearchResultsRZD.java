@@ -71,10 +71,10 @@ public String returnTrains() {
 	finalOutput = foundTrainQuantity.getText()+": ";
     System.out.println(foundTrainQuantity.getText());
 	
-	List<WebElement> listOfTrains = driver.findElements(By.cssSelector(".l-train-card"));
-	
+	List<WebElement> listOfTrains = driver.findElements(By.xpath("//div[@class='l-train-desc__num']/a"));
+ 
 	for (int i=0;i<listOfTrains.size();i++) {
-		finalOutput = finalOutput+listOfTrains.get(i).findElement(By.xpath("//div[@class='l-train-desc__num']/a")).getText()+";";		
+		finalOutput = finalOutput+listOfTrains.get(i).getText()+";";		
 	}
 	
 	System.out.println(finalOutput);

@@ -17,6 +17,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
 import com.fasterxml.jackson.core.type.TypeReference;
@@ -44,7 +45,7 @@ public class BaseTest {
 			
 			ChromeOptions options = new ChromeOptions();
 			
-			//WebDriverManager.chromedriver().setup();
+		//	WebDriverManager.chromedriver().setup();
 		    System.setProperty("webdriver.chrome.driver", "/home/ec2-user/chromedriver-linux64/chromedriver");
 			//System.setProperty("webdriver.chrome.driver", "/Users/ansobolev1989/Local Files/chromedriver-mac-x64 3/chromedriver");
 			
@@ -93,7 +94,7 @@ public class BaseTest {
 		return mainPageRZD;
 	}
 	
-	//@AfterMethod(alwaysRun=true)
+	@AfterMethod(alwaysRun=true)
 	public void closeBrowser() throws InterruptedException {
 		
 		Thread.sleep(2000);

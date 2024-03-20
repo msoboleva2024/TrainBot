@@ -1,28 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-03-12T22:16:47 CET" name="Default suite" finished-at="2024-03-12T22:17:41 CET" duration-ms="53657">
+  <suite started-at="2024-03-20T13:28:09 CET" name="Default suite" finished-at="2024-03-20T13:29:24 CET" duration-ms="74689">
     <groups>
     </groups>
-    <test started-at="2024-03-12T22:16:47 CET" name="Default test" finished-at="2024-03-12T22:17:41 CET" duration-ms="53657">
+    <test started-at="2024-03-20T13:28:09 CET" name="Default test" finished-at="2024-03-20T13:29:24 CET" duration-ms="74689">
       <class name="tests.RZDTrainTests">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:tests.RZDTrainTests@795509d9]" started-at="2024-03-12T22:16:47 CET" name="launchApplication" finished-at="2024-03-12T22:16:52 CET" duration-ms="5126" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:tests.RZDTrainTests@5149d738]" started-at="2024-03-20T13:28:09 CET" name="launchApplication" finished-at="2024-03-20T13:28:14 CET" duration-ms="4586" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="searchTicketsActual()[pri:0, instance:tests.RZDTrainTests@795509d9]" started-at="2024-03-12T22:16:52 CET" name="searchTicketsActual" finished-at="2024-03-12T22:17:27 CET" duration-ms="34520" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- searchTicketsActual -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:tests.RZDTrainTests@795509d9]" started-at="2024-03-12T22:17:27 CET" name="launchApplication" finished-at="2024-03-12T22:17:29 CET" duration-ms="2195" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="searchTicketsJune()[pri:0, instance:tests.RZDTrainTests@795509d9]" started-at="2024-03-12T22:17:29 CET" name="searchTicketsJune" finished-at="2024-03-12T22:17:41 CET" duration-ms="11772" status="PASS">
+        <test-method signature="searchTicketsJune()[pri:0, instance:tests.RZDTrainTests@5149d738]" started-at="2024-03-20T13:28:14 CET" name="searchTicketsJune" finished-at="2024-03-20T13:28:31 CET" duration-ms="17587" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchTicketsJune -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:tests.RZDTrainTests@5149d738]" started-at="2024-03-20T13:28:31 CET" name="launchApplication" finished-at="2024-03-20T13:28:35 CET" duration-ms="3474" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="searchTicketsJuneDirectionBack()[pri:0, instance:tests.RZDTrainTests@5149d738]" started-at="2024-03-20T13:28:35 CET" name="searchTicketsJuneDirectionBack" finished-at="2024-03-20T13:28:47 CET" duration-ms="12682" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchTicketsJuneDirectionBack -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:tests.RZDTrainTests@5149d738]" started-at="2024-03-20T13:28:47 CET" name="launchApplication" finished-at="2024-03-20T13:28:51 CET" duration-ms="3635" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="searchTicketsJuneOneDirectionA()[pri:0, instance:tests.RZDTrainTests@5149d738]" started-at="2024-03-20T13:28:51 CET" name="searchTicketsJuneOneDirectionA" finished-at="2024-03-20T13:29:24 CET" duration-ms="32664" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchTicketsJuneOneDirectionA -->
       </class> <!-- tests.RZDTrainTests -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

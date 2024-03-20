@@ -5,7 +5,6 @@
     <classes>
       <class name="tests.RZDTrainTests">
         <methods>
-          <include name="searchTicketsActual"/>
           <include name="searchTicketsJune"/>
           <include name="launchApplication"/>
         </methods>

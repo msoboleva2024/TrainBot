@@ -26,6 +26,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import AbstractComponent.TelegramNotifier;
 import PageObject.MainPageRZD;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import java.util.logging.Level;
 
 public class BaseTest {
 	
@@ -44,15 +45,19 @@ public class BaseTest {
 		if (browserName.contains("chrome")) {
 			
 			ChromeOptions options = new ChromeOptions();
-			
+
+			java.util.logging.Logger.getLogger("org.openqa.selenium").setLevel(Level.ALL);
+//	        options.setCapability("goog:loggingPrefs", "{browser: ALL}");
+
 		//	WebDriverManager.chromedriver().setup();
-		  System.setProperty("webdriver.chrome.driver", "/home/ec2-user/chromedriver-linux64/chromedriver");
-		//	System.setProperty("webdriver.chrome.driver", "/Users/ansobolev1989/Local Files/chromedriver-mac-x64 3/chromedriver");
+		 System.setProperty("webdriver.chrome.driver", "/home/ec2-user/chromedriver-linux64/chromedriver");
+			//System.setProperty("webdriver.chrome.driver", "/Users/ansobolev1989/Local Files/chromedriver-mac-x64 3/chromedriver");
 			
 			if (browserName.contains("headless")) {
-			options.addArguments("--headless");
-			options.addArguments("--remote-allow-origins=*");
-			 System.out.println("Headless mode!");
+				options.addArguments("--headless");
+				options.addArguments("--remote-allow-origins=*");
+				options.addArguments("--disable-gpu");
+				System.out.println("Headless mode!");
 			}
 			 driver = new ChromeDriver(options);
 			 System.out.println("ChromeDriver  options set ");

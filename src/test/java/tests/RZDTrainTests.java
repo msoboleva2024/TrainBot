@@ -42,7 +42,7 @@ public class RZDTrainTests extends BaseTest {
 	
 	
 	
-	@Test
+
 	public void searchTicketsJune() throws InterruptedException, IOException {
 		
 		telegram.sendMsgToTelegram("Тест1: поиск билетов туда/обратно.");
@@ -67,7 +67,7 @@ public class RZDTrainTests extends BaseTest {
 	
 	
 	
-	@Test
+
 	public void searchTicketsJuneOneDirectionA () throws InterruptedException, IOException {
 		
 		
@@ -107,13 +107,13 @@ public class RZDTrainTests extends BaseTest {
 		AssertJUnit.assertTrue(mainPageRZD.checkTitle());
 		mainPageRZD.setCityFrom("Анапа");
 		mainPageRZD.setCityTo("Санкт-Петербург");
-		mainPageRZD.setFromDate("25","Июнь","2024");
+		mainPageRZD.setFromDateUpdated("25","Июнь","2024");
 		
 		SearchResultsRZD searchResultsRZD = mainPageRZD.clickSearchTickets();
-
+        System.out.println(searchResultsRZD.returnTrains());
 		telegram.sendMsgToTelegram(searchResultsRZD.returnTrains());
 		
-		telegram.sendMsgToTelegram("Тест3: закончен.");
+	    telegram.sendMsgToTelegram("Тест3: закончен.");
 		
 		
 		

@@ -32,8 +32,11 @@ public class MainPageRZD extends AbstractComponent {
 	@FindBy (xpath = "//div[contains(text(),'Куда')]/parent::div//input[@type='search']")
 	WebElement to_field;
 	
-	@FindBy (id ="departureDatePiker")
+	@FindBy (css ="div[class*='ddeparture']")
 	WebElement departureDate;
+	
+	@FindBy (css = ".l-datepicker__menu .l-datepicker__list")
+	WebElement menuMonths;
 	
 	@FindBy (css = ".ant-picker-panel")
 	WebElement calender;
@@ -112,6 +115,58 @@ public void setCityTo(String city) throws InterruptedException {
 		    break;
 		}
 	}
+	
+	
+}
+
+
+
+
+public void setFromDateUpdated( String date, String month, String year) throws InterruptedException {
+	
+
+	int k=0;
+	departureDate.click();
+	
+	waitOfVisibilityWebElement(menuMonths);
+	List<WebElement> months  = menuMonths.findElements(By.cssSelector(".l-datepicker__list-item"));
+	
+	for (int i=0;i<months.size();i++) {
+		
+		if (months.get(i).getText().contains(month)) {
+			
+			months.get(i).click();
+			WebElement actualMonth = driver.findElement(By.xpath("//div[@class='l-datepicker__name']/div[contains(text(),'"+month+"')]"));
+			waitOfVisibilityWebElement(actualMonth);
+			WebElement indexMonth = driver.findElement(By.xpath("//div[@class='l-datepicker__name']/div[contains(text(),'"+month+"')]/parent::div/parent::div/parent::div"));
+			List<WebElement> dates = indexMonth.findElements(By.cssSelector(".l-datepicker__day"));
+			
+			for (int j=1;j<dates.size();j++) {
+				
+				if (dates.get(j).findElement(By.cssSelector("span")).getText().equals(date))
+				{
+					
+					dates.get(j).click();
+					k=1;
+					
+				//	Actions action = new Actions(driver);
+				//	action.moveToElement(dates.get(j).findElement(By.xpath("/parent::div")).click().build().perform();
+					break;
+					
+				}
+				
+			
+			}
+			
+			if (k==1)
+				break;
+		
+		}
+		
+		
+		
+	}
+	
 	
 	
 }
@@ -195,6 +250,7 @@ if (calender.findElement(By.cssSelector(".ant-picker-month-btn")).getText().toLo
 
 public SearchResultsRZD clickSearchTickets() {
 	
+	waitOfWebElementClickable(suchen_btn);
 	suchen_btn.click();
 	return new SearchResultsRZD(driver);
 	

@@ -36,6 +36,15 @@ public class AbstractComponent {
 	}
 	
 	
+	
+
+	public void waitOfWebElementClickable(WebElement element) {
+		
+		
+		wait.until(ExpectedConditions.elementToBeClickable(element));
+		
+		
+	}
 	public void waitOfElementPresence(By locator) {
 		
 		

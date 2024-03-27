@@ -51,7 +51,7 @@ public class BaseTest {
 
 		//	WebDriverManager.chromedriver().setup();
 		 System.setProperty("webdriver.chrome.driver", "/home/ec2-user/chromedriver-linux64/chromedriver");
-			//System.setProperty("webdriver.chrome.driver", "/Users/ansobolev1989/Local Files/chromedriver-mac-x64 3/chromedriver");
+		//	System.setProperty("webdriver.chrome.driver", "/Users/ansobolev1989/Local Files/chromedriver-mac-x64 3/chromedriver");
 			
 			if (browserName.contains("headless")) {
 				options.addArguments("--headless");
@@ -80,7 +80,9 @@ public class BaseTest {
 		}
 		
 		
-		driver.manage().window().maximize();
+		//driver.manage().window().maximize();
+		
+		driver.manage().window().setSize(new Dimension(1440, 900));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		
 		return driver;

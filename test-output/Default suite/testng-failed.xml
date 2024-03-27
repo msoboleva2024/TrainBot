@@ -6,10 +6,8 @@
       <class name="tests.RZDTrainTests">
         <methods>
           <include name="closeBrowser"/>
-          <include name="searchTicketsJune"/>
           <include name="searchTicketsJuneDirectionBack"/>
           <include name="launchApplication"/>
-          <include name="searchTicketsJuneOneDirectionA"/>
         </methods>
       </class> <!-- tests.RZDTrainTests -->
     </classes>
